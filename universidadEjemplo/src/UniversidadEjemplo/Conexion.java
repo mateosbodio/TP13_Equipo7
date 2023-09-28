@@ -1,8 +1,10 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package UniversidadEjemplo;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -12,16 +14,10 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Mateo
- */
-public class UniversidadEjemplo {
-
-/**
- *
  * @author alejo
  */
 public class Conexion {
-    private static String url="jdbc:mariadb://localhost/universidad2";
+    private static String url="jdbc:mysql://localhost/universidadEjemplo";
     private static String usuario="root";
     private static String password="";
 
@@ -39,8 +35,8 @@ public class Conexion {
 
 
     
-    public static java.sql.Connection getConexion() {
-        java.sql.Connection con=null;
+    public static Connection getConexion() {
+        Connection con=null;
       if(conexion == null){
           
            conexion= new Conexion();
