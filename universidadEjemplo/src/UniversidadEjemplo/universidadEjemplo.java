@@ -45,18 +45,20 @@ public class universidadEjemplo {
         } catch (SQLException e) {
             System.err.println("Error al cargar datos: " + e.getMessage());
         }
-      /*
-      //Agregar Alumno.
-      String sql="INSERT INTO alumno(dni,apellido,nombre,fechaNacimiento,estado)"
-              +"values(1234,'Lopez','Maria',2000-10-25',true)";
-      PreparedStatement ps=con.prepareStatement(sql);
-     
-      int filas=ps.executeUpdate();
-      if(filas>0){
-          JOptionPane.showMessageDialog(null, "alumno agregado");
-      }
-              
-*/
+       String sql1 = "INSERT INTO materia (nombre, año, estado) VALUES (?, ?, ?)";
+
+        try (PreparedStatement ps = con.prepareStatement(sql1)) {
+            //  materia
+            ps.setString(1, "Laboratorio"); 
+            ps.setInt(2, 2023); 
+            ps.setBoolean(3, true); 
+            ps.executeUpdate();
+
+            System.out.println("Se cargo la materia.");
+        } catch (SQLException e) {
+            System.err.println("Error al cargar datos: " + e.getMessage());
+
+        }
       
     }
     
