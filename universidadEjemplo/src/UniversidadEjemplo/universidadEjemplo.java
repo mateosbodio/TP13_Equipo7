@@ -4,9 +4,6 @@ package UniversidadEjemplo;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-
-
-
 import javax.swing.JOptionPane;
 
 /**
@@ -45,6 +42,7 @@ public class universidadEjemplo {
         } catch (SQLException e) {
             System.err.println("Error al cargar datos: " + e.getMessage());
         }
+
        String sql1 = "INSERT INTO materia (nombre, año, estado) VALUES (?, ?, ?)";
 
         try (PreparedStatement ps = con.prepareStatement(sql1)) {
@@ -60,6 +58,7 @@ public class universidadEjemplo {
 
         }
       
+
     }
     
 }
