@@ -23,7 +23,8 @@ public class universidadEjemplo {
       con= Conexion.getConexion();
       
       //Agregar Alumno.
-      String sql="INSERT INTO alumno(dni,apellido,nombre,fechaNacimiento,estado)"+"values(1234,'Lopez','Maria',2000-10-25',true)";
+      String sql="INSERT INTO alumno(dni,apellido,nombre,fechaNacimiento,estado)"
+              +"values(1234,'Lopez','Maria',2000-10-25',true)";
       PreparedStatement ps=con.prepareStatement(sql);
      
       int filas=ps.executeUpdate();
