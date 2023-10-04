@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
  * @author alejo
  */
 public class Conexion {
-    private static String url="jdbc:mysql://localhost/tp13_ulp";
+    private static String url="jdbc:mariadb://localhost/universidadulp";
     private static String usuario="root";
     private static String password="";
 
@@ -23,6 +23,7 @@ public class Conexion {
      private Conexion() {
         try {
             Class.forName("org.mariadb.jdbc.Driver");
+            System.out.println("driver ok");
             
         } catch (ClassNotFoundException ex) {
             JOptionPane.showMessageDialog(null, "Clase Conexion: Error al cargar Driver");

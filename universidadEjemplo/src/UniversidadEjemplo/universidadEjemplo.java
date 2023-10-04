@@ -4,11 +4,11 @@ package UniversidadEjemplo;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-<<<<<<< HEAD
 
-=======
+
+
 import javax.swing.JOptionPane;
->>>>>>> 53c0548e3a2d107963c087ed9af55e5f64a896bb
+
 /**
  *
  * @author Mateo
@@ -23,7 +23,7 @@ public class universidadEjemplo {
       Connection con;
       con= Conexion.getConexion();
       
-<<<<<<< HEAD
+
       String sql = "INSERT INTO alumno (dni, apellido, nombre, fechaNacimiento, estado) VALUES (?, ?, ?, ?, ?)";
 
         try (PreparedStatement ps = con.prepareStatement(sql)) {
@@ -45,8 +45,7 @@ public class universidadEjemplo {
         } catch (SQLException e) {
             System.err.println("Error al cargar datos: " + e.getMessage());
         }
-      
-=======
+      /*
       //Agregar Alumno.
       String sql="INSERT INTO alumno(dni,apellido,nombre,fechaNacimiento,estado)"
               +"values(1234,'Lopez','Maria',2000-10-25',true)";
@@ -57,7 +56,7 @@ public class universidadEjemplo {
           JOptionPane.showMessageDialog(null, "alumno agregado");
       }
               
->>>>>>> 53c0548e3a2d107963c087ed9af55e5f64a896bb
+*/
       
     }
     
