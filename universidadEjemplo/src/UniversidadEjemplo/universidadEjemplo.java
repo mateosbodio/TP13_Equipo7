@@ -82,12 +82,14 @@ public class universidadEjemplo {
         } catch (SQLException e) {
             System.out.println("error"+e.getMessage());
         }
+
+
 //metodo desincripccion.
 
  try {
             PreparedStatement ps = null;
             int idAlumno = 1; 
-            int idMateria = 3; 
+            int idMateria = 1; 
             String consulta1 = "DELETE FROM inscripcion WHERE idAlumno = ? AND idMateria = ?";
             ps = con.prepareStatement(consulta1);
                    
