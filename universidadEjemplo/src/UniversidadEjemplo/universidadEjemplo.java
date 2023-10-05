@@ -87,7 +87,7 @@ public class universidadEjemplo {
  try {
             PreparedStatement ps = null;
             int idAlumno = 1; 
-            int idMateria = 2; 
+            int idMateria = 3; 
             String consulta1 = "DELETE FROM inscripcion WHERE idAlumno = ? AND idMateria = ?";
             ps = con.prepareStatement(consulta1);
                    
